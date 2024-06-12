@@ -9,7 +9,7 @@ import { useAuth } from "../../hooks/auth"
 import { useToast } from "../../hooks/toast"
 import getValidationErrors from "../../utils/getValidationErrors"
 
-import logoImg from "../../assets/logo.svg"
+import logoImg from "../../assets/Logo.png"
 
 import Input from "../../components/Input"
 import Button from "../../components/Button"
@@ -73,7 +73,7 @@ const SignIn: React.FC = () => {
           <img src={logoImg} alt="GoBarber" />
 
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Faça seu logon</h1>
+            <h1>Faça seu login</h1>
 
             <Input
               name="email"

@@ -39,8 +39,8 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData)
 
 export const AuthProvider: React.FC<Props> = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
-    const token = localStorage.getItem("@GoBarber:token")
-    const user = localStorage.getItem("@GoBarber:user")
+    const token = localStorage.getItem("@MoneyChecking:token")
+    const user = localStorage.getItem("@MoneyChecking:user")
 
     if (token) {
       const tokenData = JSON.parse(atob(token.split(".")[1]))
@@ -48,8 +48,8 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
       const currentTime = Date.now()
 
       if (currentTime > tokenExpiry) {
-        localStorage.removeItem("@GoBarber:token")
-        localStorage.removeItem("@GoBarber:user")
+        localStorage.removeItem("@MoneyChecking:token")
+        localStorage.removeItem("@MoneyChecking:user")
       }
     }
 
@@ -70,8 +70,8 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
 
     const { token, user } = response.data
 
-    localStorage.setItem("@GoBarber:token", token)
-    localStorage.setItem("@GoBarber:user", JSON.stringify(user))
+    localStorage.setItem("@MoneyChecking:token", token)
+    localStorage.setItem("@MoneyChecking:user", JSON.stringify(user))
 
     api.defaults.headers.authorization = `Bearer ${token}`
 
@@ -79,15 +79,15 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
   }, [])
 
   const signOut = useCallback(() => {
-    localStorage.removeItem("@GoBarber:token")
-    localStorage.removeItem("@GoBarber:user")
+    localStorage.removeItem("@MoneyChecking:token")
+    localStorage.removeItem("@MoneyChecking:user")
 
     setData({} as AuthState)
   }, [])
 
   const updateUser = useCallback(
     (user: User) => {
-      localStorage.setItem("@GoBarber:user", JSON.stringify(user))
+      localStorage.setItem("@MoneyChecking:user", JSON.stringify(user))
 
       setData({
         token: data.token,

@@ -9,7 +9,7 @@ import Sidebar from "../../components/Sidebar"
 import { FiPower } from "react-icons/fi"
 import { useAuth } from "../../hooks/auth"
 
-const Dashboard: React.FC = () => {
+const Graphics: React.FC = () => {
   const { signOut, user } = useAuth()
 
   return (
@@ -17,10 +17,10 @@ const Dashboard: React.FC = () => {
       <Sidebar />
 
       <Content>
-        <Header>Dashboard</Header>
+        <Header>Gráficos</Header>
       </Content>
     </Container>
   )
 }
 
-export default Dashboard
+export default Graphics
