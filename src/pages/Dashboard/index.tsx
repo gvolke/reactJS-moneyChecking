@@ -17,7 +17,7 @@ import {
 } from "./styles"
 
 import Sidebar from "../../components/Sidebar"
-import Input from "../../components/Input"
+import Input from "../../components/InputUnform"
 
 import { FiSearch } from "react-icons/fi"
 

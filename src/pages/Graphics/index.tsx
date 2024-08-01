@@ -209,7 +209,7 @@ const Graphics: React.FC = () => {
           />
 
           <PieGraphic
-            title="Gastos por Categorias"
+            title="Lançamentos por Categorias"
             options={{
               series: valuesList,
               tooltip: {

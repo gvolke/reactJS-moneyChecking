@@ -13,7 +13,7 @@ import getValidationErrors from "../../utils/getValidationErrors"
 
 import logoImg from "../../assets/Logo.png"
 
-import Input from "../../components/Input"
+import Input from "../../components/InputUnform"
 import Button from "../../components/Button"
 
 import { Container, Content, AnimationContainer, Background } from "./styles"
@@ -53,7 +53,7 @@ const SignUp: React.FC = () => {
         addToast({
           type: "success",
           title: "Cadastro realizado",
-          description: "Você já pode fazer seu logon no GoBarber",
+          description: "Você já pode fazer seu login no Money Checking",
         })
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
