@@ -7,6 +7,8 @@ import { Link, useHistory } from "react-router-dom"
 
 import api from "../../services/api"
 
+import defaultAvatar from "../../assets/Avatar padrão.jpg"
+
 import { useToast } from "../../hooks/toast"
 
 import getValidationErrors from "../../utils/getValidationErrors"
@@ -143,7 +145,10 @@ const Profile: React.FC = () => {
           onSubmit={handleSubmit}
         >
           <AvatarInput>
-            <img src={user.avatar_url} alt={user.name} />
+            <img
+              src={user.avatar_url ? user.avatar_url : defaultAvatar}
+              alt={user.name}
+            />
             <label htmlFor="avatar">
               <FiCamera />
               <input type="file" id="avatar" onChange={handleAvatarChange} />

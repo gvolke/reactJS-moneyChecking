@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { useAuth } from "../../hooks/auth"
 import { Link } from "react-router-dom"
 
+import defaultAvatar from "../../assets/Avatar padrão.jpg"
+
 import { FiMenu, FiActivity, FiBarChart2, FiLogOut } from "react-icons/fi"
 import {
   SidebarContainer,
@@ -48,7 +50,10 @@ const Sidebar: React.FC = () => {
 
           <SidebarFooter>
             <Link to="/profile">
-              <UserAvatar src={user.avatar_url} alt="profile" />
+              <UserAvatar
+                src={user.avatar_url ? user.avatar_url : defaultAvatar}
+                alt="profile"
+              />
               <UserName>{user.name}</UserName>
             </Link>
             <FiLogOut size={25} onClick={signOut} />
@@ -74,7 +79,7 @@ const Sidebar: React.FC = () => {
           </SidebarContent>
 
           <SidebarFooter>
-            <FiLogOut size={25} />
+            <FiLogOut size={25} onClick={signOut} />
           </SidebarFooter>
         </div>
       )}
