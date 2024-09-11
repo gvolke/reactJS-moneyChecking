@@ -6,7 +6,7 @@ interface SideBarProps {
 }
 
 export const SidebarContainer = styled.div<SideBarProps>`
-  height: 100vh;
+  height: 100dvh;
   width: ${(props) => (props.expanded ? "15em" : "5em")};
   background-color: #00a6ff;
   color: white;
