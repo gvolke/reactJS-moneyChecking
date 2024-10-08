@@ -95,20 +95,14 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toLocaleString("pt-BR", {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    })
+                    return value.toFixed(2)
                   },
                 },
               },
               dataLabels: {
                 enabled: true,
                 formatter: function (value: number) {
-                  return value.toLocaleString("pt-BR", {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                  })
+                  return value.toFixed(2)
                 },
               },
               colors: ["#32CD32"],
@@ -124,20 +118,14 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toLocaleString("pt-BR", {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    })
+                    return value.toFixed(2)
                   },
                 },
               },
               dataLabels: {
                 enabled: true,
                 formatter: function (value: number) {
-                  return value.toLocaleString("pt-BR", {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                  })
+                  return value.toFixed(2)
                 },
               },
               colors: ["#FF8C00"],
@@ -153,20 +141,14 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toLocaleString("pt-BR", {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    })
+                    return value.toFixed(2)
                   },
                 },
               },
               dataLabels: {
                 enabled: true,
                 formatter: function (value: number) {
-                  return value.toLocaleString("pt-BR", {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                  })
+                  return value.toFixed(2)
                 },
               },
               colors: ["#1E90FF"],
@@ -182,20 +164,14 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toLocaleString("pt-BR", {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    })
+                    return value.toFixed(2)
                   },
                 },
               },
               dataLabels: {
                 enabled: true,
                 formatter: function (value: number) {
-                  return value.toLocaleString("pt-BR", {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                  })
+                  return value.toFixed(2)
                 },
               },
               colors: ["#32CD32", "#FF8C00", "#1E90FF"],
@@ -215,10 +191,7 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toLocaleString("pt-BR", {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    })
+                    return value.toFixed(2)
                   },
                 },
               },

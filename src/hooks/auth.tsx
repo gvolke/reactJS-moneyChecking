@@ -50,6 +50,8 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
       if (currentTime > tokenExpiry) {
         localStorage.removeItem("@MoneyChecking:token")
         localStorage.removeItem("@MoneyChecking:user")
+
+        return {} as AuthState
       }
     }
 
