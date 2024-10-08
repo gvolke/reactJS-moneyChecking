@@ -118,14 +118,14 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toFixed(2)
+                    return parseFloat(value.toFixed(2)).toString()
                   },
                 },
               },
               dataLabels: {
                 enabled: true,
                 formatter: function (value: number) {
-                  return value.toFixed(2)
+                  return parseFloat(value.toFixed(2)).toString()
                 },
               },
               colors: ["#FF8C00"],
@@ -141,14 +141,14 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toFixed(2)
+                    return parseFloat(value.toFixed(2)).toString()
                   },
                 },
               },
               dataLabels: {
                 enabled: true,
                 formatter: function (value: number) {
-                  return value.toFixed(2)
+                  return parseFloat(value.toFixed(2)).toString()
                 },
               },
               colors: ["#1E90FF"],
@@ -164,14 +164,14 @@ const Graphics: React.FC = () => {
               tooltip: {
                 y: {
                   formatter: function (value: number) {
-                    return value.toFixed(2)
+                    return parseFloat(value.toFixed(2)).toString()
                   },
                 },
               },
               dataLabels: {
                 enabled: true,
                 formatter: function (value: number) {
-                  return value.toFixed(2)
+                  return parseFloat(value.toFixed(2)).toString()
                 },
               },
               colors: ["#32CD32", "#FF8C00", "#1E90FF"],
